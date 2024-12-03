@@ -1,0 +1,20 @@
+import { BookOpen, Shapes, PanelsTopLeft } from 'lucide-react'
+
+# Introduction
+
+Hello, universe! This is an open-source Prose UI starter template for documentation sites built with Next.js. Feel free to clone this template and start building your own site.
+
+This template uses Prose UI components and remark plugins to render MDX content. For example, the image below is rendered using the `Image` and `Frame` components, with a caption.
+
+<Frame align='center' caption="Juno Captures Moon Shadow on Jupiter. Credits: NASA/JPL-Caltech/SwRI/MSSS, Thomas Thomopoulos © CC BY">
+  <Image width={480} src="/img/jupiter.jpg" alt="Juno Captures Moon Shadow on Jupiter"  />
+</Frame>
+
+
+<Cards
+  content={[ 
+  { icon: BookOpen, title: 'Installation', description: 'Learn how to add Prose UI to your Next.js project.', url: '/docs/installation', },
+  { icon: PanelsTopLeft, title: 'Templates', description: 'Start quickly with one of our ready-made templates.', url: '/docs/templates', },
+  { icon: Shapes, title: 'Components', description: 'Browse and explore Prose UI components.', url: '/docs/components/overview', }
+  ]}
+/>

@@ -1,101 +1,72 @@
-import Image from "next/image";
+import { Button } from '@/components/ui/button'
+import { Feature } from '@/components/feature'
+import Link from 'next/link'
+import { SiVercel } from '@icons-pack/react-simple-icons'
+import { ArrowRight } from 'lucide-react'
 
-export default function Home() {
+export default () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="prose-ui">
+      <div className="mx-auto flex w-full max-w-3xl flex-col pt-16 mb-32">
+        <h1>
+          Documentation starter template <br />
+          with Prose UI + Next.js
+        </h1>
+        <p className="text-color-low text-lg font-medium">
+          Welcome, travelers and builders of the digital frontier. This template is your launchpad
+          for crafting stunning documentation websites.
+        </p>
+        <div className="mt-8 flex items-center gap-2">
+          <Button size="lg" asChild>
+            <Link href="/docs">
+              Documentation <ArrowRight size={16} />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="lg" asChild>
+            <Link
+              href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world"
+              target="_blank"
+            >
+              <SiVercel size={16} />
+              Deploy with Vercel
+            </Link>
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="mt-12 grid grid-cols-2 [&>*:nth-child(even)]:border-l-2 [&>*]:border-color-base [&>*]:border-t-2 border-b-2">
+          <Feature
+            title="Next.js 15 with app router"
+            description="Leverage the latest Next.js 15 features, including the app router, server actions, and more."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <Feature
+            title="Tailwind CSS"
+            description="Uses Tailwind CSS to achieve a clean and modern look."
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <Feature
+            title="Shadcn UI"
+            description="Uses Tailwind CSS to achieve a clean and modern look."
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <Feature
+            title="Dark mode witih next/theme"
+            description="Uses Tailwind CSS to achieve a clean and modern look."
+          />
+          <Feature
+            title="WYSIWYG editing"
+            description="Edit your Prose UI content with Dhub's inline editor."
+          />
+          <Feature
+            title="Content collections"
+            description="Uses Content Collections with MDX bundler to manage MDX content."
+          />
+        </div>
+      </div>
+      <div className="border-t">
+        <div className="mx-auto w-full max-w-3xl flex-col pt-16 mb-32 flex mt-12 items-center justify-between text-sm ">
+          <p>
+            Open source documentation stater template with Next.js and Prose UI. Built with ❤️ by{' '}
+            <a href="https://valdemaras.com">Valdemaras</a>, designed by <a href="#">Domas</a>
+          </p>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
