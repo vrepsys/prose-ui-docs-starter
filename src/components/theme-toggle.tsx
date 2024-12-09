@@ -12,7 +12,7 @@ export const ThemeToggle = () => {
   }
 
   return (
-    <Button onClick={toggleTheme} variant="ghost" size="icon" aria-label="Toggle theme">
+    <Button onClick={toggleTheme} variant="navitem" size="icon" aria-label="Toggle theme">
       <MoonIcon className="block h-4 w-4 dark:hidden" />
       <SunIcon className="hidden h-4 w-4 dark:block" />
     </Button>
