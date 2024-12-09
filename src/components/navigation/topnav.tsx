@@ -13,30 +13,32 @@ export const TopNav = () => {
   const pathname = usePathname()
   return (
     <header className="bg-color-base border-b-color-base sticky top-0 z-10 flex h-[var(--topnav-height)] w-full border-b py-2">
-      <div className="relative mx-auto flex w-full max-w-[var(--site-width)] items-center justify-between px-[var(--site-padding-x)] lg:gap-8">
+      <div className="relative mx-auto flex w-full max-w-[var(--site-width)] px-[var(--site-padding-x)] items-center justify-between  lg:gap-8">
         <div className="flex shrink-0 items-center gap-2 md:w-[calc(var(--side-nav-width)-var(--site-padding-x))]">
           <Logo href="/" showText />
         </div>
-        <nav className="hidden items-center justify-start gap-2 md:flex">
-          <Button variant="navitem" active={/^\/docs(\/|$)/.test(pathname)} asChild>
-            <Link href="/docs">Documentation</Link>
-          </Button>
-          <Button variant="navitem" active={/^\/templates(\/|$)/.test(pathname)} asChild>
-            <Link href="/templates">
-              Prose UI <ExternalLinkIcon size={16} />
-            </Link>
-          </Button>
-        </nav>
-        <div className="hidden items-center justify-start gap-2 md:flex">
-          <Button variant="ghost" asChild>
-            <Link href="https://github.com/vrepsys/prose-ui">
-              <SiGithub size={16} />
-              View on Github
-            </Link>
-          </Button>
-          <ThemeToggle />
-        </div>
+        <div className="flex gap-2">
+          <nav className="hidden items-center justify-start gap-2 md:flex">
+            <Button variant="navitem" active={/^\/docs(\/|$)/.test(pathname)} asChild>
+              <Link href="/docs">Documentation</Link>
+            </Button>
+            <Button variant="navitem" active={/^\/templates(\/|$)/.test(pathname)} asChild>
+              <Link href="/templates">
+                Prose UI <ExternalLinkIcon size={16} />
+              </Link>
+            </Button>
+          </nav>
 
+          <div className="hidden items-center justify-start gap-2 md:flex">
+            <Button variant="navitem" asChild>
+              <Link href="https://github.com/vrepsys/prose-ui-docs-starter">
+                <SiGithub size={16} />
+                Github
+              </Link>
+            </Button>
+            <ThemeToggle />
+          </div>
+        </div>
         <nav className="flex flex-1 items-center justify-end gap-2 md:hidden">
           <ThemeToggle />
           <MobileNav />
