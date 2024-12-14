@@ -11,22 +11,14 @@ import { classes } from '@/utils/classes'
 
 type Props = {
   tree: NavTree
-  largeTMP?: boolean
 }
 
-const SidenavCategory = ({
-  item,
-  level,
-}: {
-  item: TreeNode
-  level: number
-  largeTMP?: boolean
-}) => {
+const SidenavCategory = ({ item, level }: { item: TreeNode; level: number }) => {
   return (
-    <div className="flex flex-col">
+    <div className="ml-[0.875rem] flex flex-col md:ml-2 [&:not(:first-child)]:mt-6">
       <h4 className="text-color-base px-0 py-1.5 font-semibold md:text-sm">{item.name}</h4>
-      <ul className="-ml-[0.875rem] flex flex-col gap-px md:-ml-2" aria-label={item.name}>
-        <SidenavItems items={item.children} level={level} />
+      <ul className="-ml-[0.875rem] flex flex-col md:-ml-2" aria-label={item.name}>
+        <SidenavItems items={item.children} level={level + 1} />
       </ul>
     </div>
   )
@@ -87,7 +79,7 @@ const SidenavFolder = ({ item, level }: { item: TreeNode; level: number }) => {
           }
         }}
         className={classes(
-          'group  hover:bg-color-low/60 relative mb-px flex cursor-pointer flex-row items-center justify-between rounded-md px-[0.875rem] py-2 font-medium transition md:px-2 md:py-[0.3rem] md:text-sm',
+          'hover:bg-color-low/60 group relative mb-px flex cursor-pointer flex-row items-center justify-between rounded-md px-[0.875rem] py-2 font-medium transition md:px-2 md:py-[0.3rem] md:text-sm',
           active ? 'text-color-accent-high' : 'hover:text-color-base text-color-low',
           open && 'bg-color-lower'
         )}
@@ -128,7 +120,7 @@ const FolderContents = ({
         <motion.ul
           role="list"
           layoutScroll
-          className="flex flex-col gap-px overflow-y-clip pl-4"
+          className="flex flex-col overflow-y-clip pl-4"
           aria-label={item.name}
           transition={{ duration: 0.15 }}
           initial={{ height: 0, opacity: 0.7 }}
@@ -142,23 +134,21 @@ const FolderContents = ({
   )
 }
 
-const SidenavLink = ({ item }: { item: TreeNode; level: number }) => {
+export const SidenavLink = ({ href, children }: { href: string; children: ReactNode }) => {
   const pathname = usePathname()
-  const active = item.href === pathname
+  const active = href === pathname
   return (
-    <li className="relative">
-      <Link
-        className={classes(
-          'flex w-full cursor-pointer rounded-lg px-[0.875rem] py-2 font-medium transition md:px-2 md:py-[0.3rem] md:text-sm',
-          active
-            ? 'bg-color-low text-color-accent-high'
-            : 'hover:text-color-base text-color-low hover:bg-color-low/60'
-        )}
-        href={item.href!}
-      >
-        {item.name}
-      </Link>
-    </li>
+    <Link
+      className={classes(
+        'mt-px items-center gap-2 flex w-full cursor-pointer rounded-lg px-[0.875rem] py-2 font-medium transition md:px-2 md:py-[0.3rem] md:text-sm',
+        active
+          ? 'bg-color-low text-color-accent-high'
+          : 'hover:text-color-base text-color-low hover:bg-color-low/60'
+      )}
+      href={href}
+    >
+      {children}
+    </Link>
   )
 }
 
@@ -171,7 +161,11 @@ const SidenavItems = ({ items, level }: { items: TreeNode[]; level: number }) =>
         } else if (item.type === 'folder') {
           return <SidenavFolder key={item.path} item={item} level={level} />
         } else {
-          return <SidenavLink key={item.path} item={item} level={level} />
+          return (
+            <li key={item.path}>
+              <SidenavLink href={item.name}>{item.name}</SidenavLink>
+            </li>
+          )
         }
       })}
     </>
@@ -183,7 +177,7 @@ export const SideNav = ({ tree }: Props) => {
   return (
     <SidenavProvider tree={node}>
       <nav>
-        <ul className="flex flex-col gap-6">
+        <ul>
           <SidenavItems items={node} level={0} />
         </ul>
       </nav>
@@ -211,7 +205,7 @@ function generateTree(tree: NavTree): TreeNode[] {
           return {
             type,
             name,
-            href: item.href ? `/docs${item.href}`.replace(/\/$/, '') : undefined,
+            href: item.href ? `${item.href}`.replace(/\/$/, '') : undefined,
             path,
             children,
           }

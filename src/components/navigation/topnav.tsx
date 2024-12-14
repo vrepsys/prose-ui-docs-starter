@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { ExternalLinkIcon } from 'lucide-react'
+import { GithubButton } from '../github-button'
 
 export const TopNav = () => {
   const pathname = usePathname()
@@ -22,8 +23,8 @@ export const TopNav = () => {
             <Button variant="navitem" active={/^\/docs(\/|$)/.test(pathname)} asChild>
               <Link href="/docs">Documentation</Link>
             </Button>
-            <Button variant="navitem" active={/^\/templates(\/|$)/.test(pathname)} asChild>
-              <Link href="/templates">
+            <Button variant="navitem" asChild>
+              <Link href="https://prose-ui.com">
                 Prose UI <ExternalLinkIcon size={16} />
               </Link>
             </Button>
@@ -40,6 +41,7 @@ export const TopNav = () => {
           </div>
         </div>
         <nav className="flex flex-1 items-center justify-end gap-2 md:hidden">
+          <GithubButton />
           <ThemeToggle />
           <MobileNav />
         </nav>

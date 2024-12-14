@@ -46,8 +46,8 @@
   :root {
     --p-link-font-weight: var(--p-font-weight-medium);
     --p-color-accent-high: 0, 0%, 0%;
-    --p-color-accent: 0, 0%, 0%;
-    --p-color-accent-low: 0, 0%, 40%;
+    --p-color-accent: 0, 0%, 10%;
+    --p-color-accent-low: 0, 0%, 70%;
     --button-primary-color-bg: var(--gray-12);
     --button-primary-color-text: var(--gray-1);
   }

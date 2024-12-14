@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Feature } from '@/components/feature'
 import Link from 'next/link'
 import { SiVercel, SiNextdotjs, SiTailwindcss, SiShadcnui } from '@icons-pack/react-simple-icons'
-import { ArrowRight } from 'lucide-react'
+import { Footer } from '@/components/navigation/footer'
 
 export default () => {
   return (
@@ -69,14 +69,7 @@ export default () => {
           />
         </div>
       </div>
-      <div className="border-t">
-        <div className="mx-auto w-full max-w-3xl flex-col pt-16 mb-32 flex mt-12 items-center justify-between text-sm ">
-          <p className="text-color-lowest">
-            Open source documentation stater template with Next.js and Prose UI. Built with ❤️ by{' '}
-            <a href="https://valdemaras.com">Valdemaras</a>, designed by <a href="#">Domas</a>
-          </p>
-        </div>
-      </div>
+      <Footer />
     </div>
   )
 }

@@ -14,7 +14,7 @@ const SidenavContext = createContext<ContextProps | undefined>(undefined)
 
 function getPathsByUrl(
   tree: TreeNode[],
-  pathsByUrl: Map<string, string> = new Map<string, string>(),
+  pathsByUrl: Map<string, string> = new Map<string, string>()
 ) {
   tree.forEach((item) => {
     if ('href' in item && item.href) {
@@ -53,10 +53,6 @@ export const SidenavProvider = ({ tree, children }: { tree: TreeNode[]; children
 
   const isExpanded = (path: string) => expandedFolders.has(path)
 
-  useEffect(() => {
-    console.log(expandedFolders)
-  }, [expandedFolders])
-
   const toggleExpandFolder = useCallback(
     (path: string) => {
       setExpandedFolders((all) => {
@@ -69,7 +65,7 @@ export const SidenavProvider = ({ tree, children }: { tree: TreeNode[]; children
         return all
       })
     },
-    [isExpanded, expandedFolders],
+    [isExpanded, expandedFolders]
   )
 
   return (

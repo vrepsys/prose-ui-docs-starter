@@ -16,8 +16,28 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Prose UI',
-  description: 'Typography and components for rendering MDX content. Free and open-source.',
+  title: 'Prose UI Docs Starter',
+  description: 'Documentation starter template with Next.js and Prose UI. Free and open-source.',
+  openGraph: {
+    type: 'website',
+    title: 'Prose UI Docs Starter',
+    description: 'Documentation starter template with Next.js and Prose UI. Free and open-source.',
+    url: 'https://prose-ui-docs-starter.vercel.app',
+  },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      url: '/favicon-dark.svg',
+      media: '(prefers-color-scheme: light)',
+    },
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      url: '/favicon-light.svg',
+      media: '(prefers-color-scheme: dark)',
+    },
+  ],
 }
 
 export default function RootLayout({
