@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { classes } from '@/utils/classes'
-import { Section } from '@/lib/make-sections'
 import { Button } from '../ui/button'
+import { Section } from '@/lib/extract-toc'
 
 type Heading = {
   id: string
@@ -36,7 +36,7 @@ export const Toc = ({ sections }: Props) => {
           return { id, top }
         })
         .filter((h): h is Heading => h !== null),
-    [],
+    []
   )
 
   useEffect(() => {

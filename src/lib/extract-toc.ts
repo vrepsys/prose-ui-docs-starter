@@ -8,7 +8,7 @@ export type Section = {
   depth: number
 }
 
-export const makeSections = (root: Root): Section[] => {
+export const extractToc = (root: Root): Section[] => {
   const sections: Section[] = []
   for (const node of root.children) {
     if (node.type === 'heading') {
