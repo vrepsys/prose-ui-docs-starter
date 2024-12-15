@@ -163,7 +163,7 @@ const SidenavItems = ({ items, level }: { items: TreeNode[]; level: number }) =>
         } else {
           return (
             <li key={item.path}>
-              <SidenavLink href={item.name}>{item.name}</SidenavLink>
+              <SidenavLink href={item.href!}>{item.name}</SidenavLink>
             </li>
           )
         }
