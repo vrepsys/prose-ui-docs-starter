@@ -9,8 +9,6 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: `transition ease-in-out text-[hsl(var(--p-color-bg-high))] bg-[hsl(var(--p-color-text-high))] active:translate-y-[1px] rounded-md sm:rounded hover:ring-1 ring-offset-[hsl(var(--p-color-bg))] hover:ring-color-accent-low hover:ring-offset-2`,
-        reactive:
-          'transition text-color-base group-hover:text-[hsl(var(--p-color-bg-high))] hover:brightness-125 hover:saturation-125 group-hover:bg-[hsl(var(--p-color-text-high))] hover:bg-color-accent-base active:translate-y-[1px] rounded-md sm:rounded tracking-tight',
         secondary:
           'text-color-base hover:text-color-base bg-color-low hover:bg-color-lower active:translate-y-[1px] rounded-md sm:rounded',
         ghost:
