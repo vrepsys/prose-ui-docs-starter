@@ -36,7 +36,6 @@
     --nav-heading-line-height: var(--p-h6-font-height);
     --nav-heading-letter-spacing: var(--p-h6-letter-spacing);
     --nav-heading-font-weight: var(--p-h6-font-weight);
-
     --nav-link-font-size: var(--p-body-font-size);
     --nav-link-line-height: var(--p-body-font-height);
     --nav-link-letter-spacing: var(--p-body-letter-spacing);
@@ -45,16 +44,16 @@
 
   :root {
     --p-link-font-weight: var(--p-font-weight-medium);
-    --p-color-accent-high: 0, 0%, 0%;
-    --p-color-accent: 0, 0%, 10%;
-    --p-color-accent-low: 0, 0%, 70%;
+    --p-color-accent-high: 150 70% 40%;
+    --p-color-accent: 150 60% 40%;
+    --p-color-accent-low: 150 15% 80%;
     --button-primary-color-bg: var(--gray-12);
     --button-primary-color-text: var(--gray-1);
   }
   :root:is(.dark) {
-    --p-color-accent-high: 180, 0%, 100%;
-    --p-color-accent: 180, 0%, 90%;
-    --p-color-accent-low: 180, 0%, 30%;
+    --p-color-accent-high: 150 66% 56%;
+    --p-color-accent: 150 60% 50%;
+    --p-color-accent-low: 150 15% 20%;
     --button-primary-color-bg: var(--gray-12);
     --button-primary-color-text: var(--gray-3);
   }
