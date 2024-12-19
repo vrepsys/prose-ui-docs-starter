@@ -5,13 +5,11 @@ import { MobileNav } from './mobile-nav'
 import { Logo } from './logo'
 import { Button } from '../ui/button'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { ExternalLinkIcon } from 'lucide-react'
 import { GithubButton } from '../github-button'
 
 export const TopNav = () => {
-  const pathname = usePathname()
   return (
     <header className="bg-color-base border-b-color-base sticky top-0 z-10 flex h-[var(--topnav-height)] w-full border-b py-2">
       <div className="relative mx-auto flex w-full max-w-[var(--site-width)] px-[var(--site-padding-x)] items-center justify-between  lg:gap-8">
@@ -20,9 +18,6 @@ export const TopNav = () => {
         </div>
         <div className="flex gap-2">
           <nav className="hidden items-center justify-start gap-2 md:flex">
-            <Button variant="navitem" active={/^\/docs(\/|$)/.test(pathname)} asChild>
-              <Link href="/docs">Documentation</Link>
-            </Button>
             <Button variant="navitem" asChild>
               <Link href="https://prose-ui.com">
                 Prose UI <ExternalLinkIcon size={16} />

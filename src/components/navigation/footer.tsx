@@ -5,7 +5,7 @@ export const Footer = () => (
   <div className="border-color-base text-color-lower fon-medium border-t">
     <div className="mx-auto grid w-full max-w-[var(--site-width)] grid-cols-1 gap-4 px-[var(--site-padding-x)] py-16">
       <div className="flex items-center gap-4 md:gap-1">
-        <Logo />{' '}
+        <Logo />
         <p className="text-color-lowest !my-0 text-sm font-medium">
           Open source documentation stater template with{' '}
           <Link href="https://nextjs.org">Next.js</Link> and{' '}

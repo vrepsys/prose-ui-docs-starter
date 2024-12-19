@@ -43,17 +43,10 @@
   }
 
   :root {
-    --p-link-font-weight: var(--p-font-weight-medium);
-    --p-color-accent-high: 150 70% 40%;
-    --p-color-accent: 150 60% 40%;
-    --p-color-accent-low: 150 15% 80%;
     --button-primary-color-bg: var(--gray-12);
     --button-primary-color-text: var(--gray-1);
   }
   :root:is(.dark) {
-    --p-color-accent-high: 150 66% 56%;
-    --p-color-accent: 150 60% 50%;
-    --p-color-accent-low: 150 15% 20%;
     --button-primary-color-bg: var(--gray-12);
     --button-primary-color-text: var(--gray-3);
   }
