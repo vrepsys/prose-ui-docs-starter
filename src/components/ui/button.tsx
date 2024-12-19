@@ -10,10 +10,10 @@ const buttonVariants = cva(
       variant: {
         primary: `transition ease-in-out text-[hsl(var(--p-color-bg-high))] bg-[hsl(var(--p-color-text-high))] active:translate-y-[1px] rounded-md sm:rounded hover:ring-1 ring-offset-[hsl(var(--p-color-bg))] hover:ring-color-accent-low hover:ring-offset-2`,
         secondary:
-          'text-color-base hover:text-color-base bg-color-low hover:bg-color-lower active:translate-y-[1px] rounded-md sm:rounded',
+          'text-color-base hover:text-color-accent-high bg-color-low hover:bg-color-lower active:translate-y-[1px] rounded-md sm:rounded',
         ghost:
-          'text-color-low hover:text-color-base hover:bg-color-low/60 active:translate-y-[1px] rounded-md sm:rounded',
-        link: 'text-color-low hover:text-color-base',
+          'text-color-base hover:text-color-accent-high hover:bg-color-low/60 active:translate-y-[1px] rounded-md sm:rounded',
+        link: 'text-color-base hover:text-color-accent-high',
         navitem: 'rounded-lg',
       },
       size: {
@@ -23,7 +23,7 @@ const buttonVariants = cva(
         icon: 'justify-center h-8 w-8',
       },
       active: {
-        true: 'text-color-accent-high hover:text-color-accent-high',
+        true: 'text-color-accent-base',
         false: '',
       },
     },
@@ -36,7 +36,7 @@ const buttonVariants = cva(
       {
         variant: 'navitem',
         active: false,
-        class: 'hover:text-color-base text-color-low hover:bg-color-low/60',
+        class: 'text-color-base hover:text-color-accent-high hover:bg-color-low/60',
       },
     ],
     defaultVariants: {

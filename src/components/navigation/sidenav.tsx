@@ -80,7 +80,7 @@ const SidenavFolder = ({ item, level }: { item: TreeNode; level: number }) => {
         }}
         className={classes(
           'hover:bg-color-low/60 group relative mb-px flex cursor-pointer flex-row items-center justify-between rounded-md px-[0.875rem] py-2 font-medium transition md:px-2 md:py-[0.3rem] md:text-sm',
-          active ? 'text-color-accent-high' : 'hover:text-color-base text-color-low',
+          active ? 'text-color-accent-base' : 'text-color-low hover:text-color-accent-high',
           open && 'bg-color-lower'
         )}
       >
@@ -142,8 +142,8 @@ export const SidenavLink = ({ href, children }: { href: string; children: ReactN
       className={classes(
         'mt-px items-center gap-2 flex w-full cursor-pointer rounded-lg px-[0.875rem] py-2 font-medium transition md:px-2 md:py-[0.3rem] md:text-sm',
         active
-          ? 'bg-color-low text-color-accent-high'
-          : 'hover:text-color-base text-color-low hover:bg-color-low/60'
+          ? 'bg-color-low text-color-accent-base'
+          : 'hover:text-color-accent-high text-color-low hover:bg-color-low/60'
       )}
       href={href}
     >

@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import { navigationTree } from './navigation/nav-tree'
 import { SideNav } from './navigation/sidenav'
 import { ScrollArea } from './ui/scroll-area'
+import { Footer } from './navigation/footer'
 
 export const DocsLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -17,6 +18,7 @@ export const DocsLayout = ({ children }: PropsWithChildren) => {
           </div>
           {children}
         </div>
+        <Footer />
       </main>
     </>
   )

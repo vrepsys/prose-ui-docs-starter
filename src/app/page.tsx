@@ -17,13 +17,13 @@ export default () => {
             Welcome, travelers and builders of the digital frontier. This template is your launchpad
             for crafting stunning documentation websites.
           </p>
-          <div className="mt-16 justify-center flex items-center gap-2">
+          <div className="mt-16 justify-center flex flex-col md:flex-row items-center gap-4 md:gap-2">
             <Button size="lg" asChild>
               <Link href="/docs">View Documentation</Link>
             </Button>
-            <Button variant="ghost" size="lg" asChild>
+            <Button variant="link" size="lg" asChild>
               <Link
-                href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world"
+                href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvrepsys%2Fprose-ui-docs-starter"
                 target="_blank"
               >
                 <SiVercel size={16} />
@@ -33,10 +33,10 @@ export default () => {
           </div>
         </div>
 
-        <div className="mt-32 h-px w-full bg-gradient-to-r from-transparent via-[hsl(var(--p-color-border))] to-transparent"></div>
+        <div className="mt-16 md:mt-32 h-px w-full bg-gradient-to-r from-transparent via-[hsl(var(--p-color-border))] to-transparent"></div>
 
         {/* //[&>*:nth-child(even)]:border-l-2 [&>*]:border-color-base [&>*]:border-t-2 */}
-        <div className="px-12 mt-12 grid grid-cols-3 gap-x-24">
+        <div className="md:px-12 md:mt-12 grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-24">
           <Feature
             icon={<SiNextdotjs size={20} />}
             title="Next.js 15 with app router"
