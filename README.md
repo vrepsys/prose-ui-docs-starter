@@ -12,8 +12,6 @@ MDX content for this template can be visually edited using [Dhub's WYSIWYG edito
 
 ## Tech stack
 
-This template uses the following technologies:
-
 [Next.js 15](https://nextjs.org)\
 The backbone of the site. Pre-renders pages at build time for fast production performance.
 
@@ -38,8 +36,6 @@ Provides accessible components used for key elements in this template.
 ---
 
 ## Key features
-
-This template includes the following features:
 
 **WYSIWIG editor**\
 Edit your Prose UI MDX files with [Dhub's](https://dhub.dev) WYSIWYG editor.
