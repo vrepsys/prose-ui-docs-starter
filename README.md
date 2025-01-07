@@ -4,7 +4,7 @@
 
 ## Prose UI Docs Starter
 
-This is a documentation starter template with [Next.js](https://nextjs.org) and **[Prose UI](https://prose-ui.com)**.
+This is a documentation starter template with [Next.js](https://nextjs.org) and [Prose UI](https://prose-ui.com).
 
 MDX content for this template can be visually edited using [Dhub's WYSIWYG editor](https://dhub.dev).
 
@@ -14,25 +14,25 @@ MDX content for this template can be visually edited using [Dhub's WYSIWYG edito
 
 This template uses the following technologies:
 
-**[Next.js 15](https://nextjs.org)**\
+[Next.js 15](https://nextjs.org)\
 The backbone of the site. Pre-renders pages at build time for fast production performance.
 
-**[Prose UI](https://prose-ui.com)**\
+[Prose UI](https://prose-ui.com)\
 Provides components and styles for building clean, MDX-powered documentation.
 
-**[TailwindCSS](https://tailwindcss.com)**\
+[TailwindCSS](https://tailwindcss.com)\
 Facilitates flexible and efficient styling.
 
-**[Shadcn UI](https://ui.shadcn.com)**\
+[Shadcn UI](https://ui.shadcn.com)\
 Includes familiar, shadcn-inspired components.
 
-**[Content Collections](https://www.content-collections.dev)**\
+[Content Collections](https://www.content-collections.dev)\
 Renders MDX files with `mdx-bundler` and helps manage frontmatter.
 
-**[MDX v3](https://mdxjs.com)**\
+[MDX v3](https://mdxjs.com)\
 Combines Markdown and JSX for interactive, component-based content.
 
-**[Radix](https://mdxjs.com)**\
+[Radix](https://mdxjs.com)\
 Provides accessible components used for key elements in this template.
 
 ---
