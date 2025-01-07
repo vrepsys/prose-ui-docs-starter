@@ -1,5 +1,5 @@
 <a href="https://prose-ui-docs-starter.vercel.app" >
-  <img alt="Prose UI social image" src="https://repository-images.githubusercontent.com/897893154/12074360-f0b7-47f3-b1ec-10ef71fdbf0c">
+  <img alt="Prose UI social image" src="https://repository-images.githubusercontent.com/897893154/12074360-f0b7-47f3-b1ec-10ef71fdbf0c" />
 </a>
 
 ## Prose UI Docs Starter
