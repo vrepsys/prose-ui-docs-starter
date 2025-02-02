@@ -10,24 +10,24 @@ const pages = defineCollection({
   schema: (z) => ({
     title: z.optional(z.string()),
   }),
-  transform: async (post, ctx) => {
-    const { toc, title } = await extractMetadata(post.content)
-    const content = await compileMDX(ctx, post, {
+  transform: async (page, ctx) => {
+    const { toc, title } = await extractMetadata(page.content)
+    const content = await compileMDX(ctx, page, {
       remarkPlugins: remarkPlugins(),
     })
     let path
-    if (post._meta.path === 'index') {
+    if (page._meta.path === 'index') {
       path = ''
-    } else if (post._meta.path.endsWith('/index')) {
-      path = post._meta.path.slice(0, -6)
+    } else if (page._meta.path.endsWith('/index')) {
+      path = page._meta.path.slice(0, -6)
     } else {
-      path = post._meta.path
+      path = page._meta.path
     }
     return {
-      ...post,
+      ...page,
       path: `/${path}`,
       toc,
-      title,
+      title: page.title ?? title,
       content,
     }
   },
