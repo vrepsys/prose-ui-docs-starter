@@ -54,7 +54,7 @@ export default () => {
           />
           <Feature
             icon={<SiNextdotjs size={20} />}
-            title="Dark mode witih next/theme"
+            title="Dark mode with next/theme"
             description="Uses Tailwind CSS to achieve a clean and modern look."
           />
           <Feature

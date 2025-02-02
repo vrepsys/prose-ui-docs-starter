@@ -37,7 +37,7 @@ Provides accessible components used for key elements in this template.
 
 ## Key features
 
-**WYSIWIG editor**\
+**WYSIWYG editor**\
 Edit your Prose UI MDX files with [Dhub's](https://dhub.dev) WYSIWYG editor.
 
 **Dark mode**\
@@ -68,7 +68,7 @@ Next.js performance optimizations make the site extremely fast with virtually in
 Coming soon
 
 **API reference docs**\
-Comming soon
+Coming soon
 
 # Get started
 
