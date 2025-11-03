@@ -11,7 +11,7 @@ import { GithubButton } from '../github-button'
 
 export const TopNav = () => {
   return (
-    <header className="bg-color-base border-b-color-base sticky top-0 z-10 flex h-[var(--topnav-height)] w-full border-b py-2">
+    <header className="bg-background border-b sticky top-0 z-10 flex h-[var(--topnav-height)] w-full border-b py-2">
       <div className="relative mx-auto flex w-full max-w-[var(--site-width)] px-[var(--site-padding-x)] items-center justify-between  lg:gap-8">
         <div className="flex shrink-0 items-center gap-2 md:w-[calc(var(--side-nav-width)-var(--site-padding-x))]">
           <Logo href="/" showText />

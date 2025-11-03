@@ -8,12 +8,12 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: `transition ease-in-out text-[hsl(var(--p-color-bg-high))] bg-[hsl(var(--p-color-text-high))] active:translate-y-[1px] rounded-md sm:rounded hover:ring-1 ring-offset-[hsl(var(--p-color-bg))] hover:ring-color-accent-low hover:ring-offset-2`,
+        primary: `transition ease-in-out text-[hsl(var(--p-color-bg-high))] bg-[hsl(var(--p-color-text-high))] active:translate-y-[1px] rounded-md sm:rounded hover:ring-1 ring-offset-[hsl(var(--p-color-bg))] hover:ring-accent-low hover:ring-offset-2`,
         secondary:
-          'text-color-base hover:text-color-accent-high bg-color-low hover:bg-color-lower active:translate-y-[1px] rounded-md sm:rounded',
+          'text-foreground hover:text-accent-high bg-background-low hover:bg-background-lower active:translate-y-[1px] rounded-md sm:rounded',
         ghost:
-          'text-color-base hover:text-color-accent-high hover:bg-color-low/60 active:translate-y-[1px] rounded-md sm:rounded',
-        link: 'text-color-base hover:text-color-accent-high',
+          'text-foreground hover:text-accent-high hover:bg-background-low/60 active:translate-y-[1px] rounded-md sm:rounded',
+        link: 'text-foreground hover:text-accent-high',
         navitem: 'rounded-lg',
       },
       size: {
@@ -23,7 +23,7 @@ const buttonVariants = cva(
         icon: 'justify-center h-8 w-8',
       },
       active: {
-        true: 'text-color-accent-base',
+        true: 'text-accent',
         false: '',
       },
     },
@@ -31,12 +31,12 @@ const buttonVariants = cva(
       {
         variant: 'navitem',
         active: true,
-        class: 'bg-color-low text-color-accent-high',
+        class: 'bg-background-low text-accent-high',
       },
       {
         variant: 'navitem',
         active: false,
-        class: 'text-color-base hover:text-color-accent-high hover:bg-color-low/60',
+        class: 'text-foreground hover:text-accent-high hover:bg-background-low/60',
       },
     ],
     defaultVariants: {

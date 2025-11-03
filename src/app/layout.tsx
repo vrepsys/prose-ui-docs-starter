@@ -8,11 +8,13 @@ const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
   weight: '100 900',
+  display: 'swap',
 })
 const geistMono = localFont({
   src: './fonts/GeistMonoVF.woff',
   variable: '--font-geist-mono',
   weight: '100 900',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -27,6 +29,11 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'icon',
+      type: 'image/x-icon',
+      url: '/favicon.ico',
+    },
+    {
+      rel: 'icon',
       type: 'image/svg+xml',
       url: '/favicon-dark.svg',
       media: '(prefers-color-scheme: light)',
@@ -36,6 +43,12 @@ export const metadata: Metadata = {
       type: 'image/svg+xml',
       url: '/favicon-light.svg',
       media: '(prefers-color-scheme: dark)',
+    },
+    {
+      rel: 'apple-touch-icon',
+      url: '/apple-touch-icon.png',
+      type: 'image/png',
+      sizes: '<generated>',
     },
   ],
 }
@@ -51,7 +64,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-color-base min-h-screen font-sans antialiased">
+      <body className={`bg-background min-h-screen font-sans antialiased ${geistSans.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

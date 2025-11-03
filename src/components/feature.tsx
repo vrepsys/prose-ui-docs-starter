@@ -13,7 +13,7 @@ export const Feature = ({ title, description, icon }: FeatureProps) => {
         {icon}
         {title}
       </h4>
-      <p className="text-color-low leading-normal">{description}</p>
+      <p className="text-foreground-low leading-normal">{description}</p>
     </div>
   )
 }

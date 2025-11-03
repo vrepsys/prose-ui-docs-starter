@@ -30,7 +30,7 @@ export const Logo = ({
   onClick?: () => void
 }) => {
   if (!showText) {
-    return <SVG className="text-color-high" />
+    return <SVG className="text-foreground-high" />
   }
   return href ? (
     <Link

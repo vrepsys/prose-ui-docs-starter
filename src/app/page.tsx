@@ -13,7 +13,7 @@ export default () => {
             Documentation starter template <br />
             with Prose UI + Next.js
           </h1>
-          <p className="text-color-low text-lg">
+          <p className="text-foreground-low text-lg">
             Welcome, travelers and builders of the digital frontier. This template is your launchpad
             for crafting stunning documentation websites.
           </p>

@@ -2,13 +2,15 @@ import { extractMetadata } from '@/lib/extract-metadata'
 import { defineCollection, defineConfig } from '@content-collections/core'
 import { compileMDX } from '@content-collections/mdx'
 import { remarkPlugins } from '@prose-ui/core'
+import { z } from 'zod'
 
 const pages = defineCollection({
   name: 'pages',
   directory: 'content/docs',
   include: '**/*.mdx',
-  schema: (z) => ({
-    title: z.optional(z.string()),
+  schema: z.object({
+    title: z.string().optional(),
+    content: z.string(),
   }),
   transform: async (page, ctx) => {
     const { toc, title } = await extractMetadata(page.content)

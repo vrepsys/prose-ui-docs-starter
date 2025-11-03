@@ -6,12 +6,21 @@ Hello, universe! This is an open-source Prose UI starter template for documentat
 
 This template uses Prose UI components and remark plugins to render MDX content. For example, the image below is rendered using the `Image` and `Frame` components, with a caption.
 
+
+
+
 <Frame
   align="center"
   caption="Juno Captures Moon Shadow on Jupiter. Credits: NASA/JPL-Caltech/SwRI/MSSS, Thomas Thomopoulos © CC BY"
 >
   <Image src="/img/jupiter.jpg" width={480} alt="Juno Captures Moon Shadow on Jupiter" />
 </Frame>
+
+Mathematical formulas can also be rendered using LaTeX syntax. Here's a block formula example:
+
+$$
+i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t) = \left[-\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r},t)\right]\Psi(\mathbf{r},t)
+$$
 
 ## Tech stack
 
