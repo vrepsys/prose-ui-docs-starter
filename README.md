@@ -12,7 +12,7 @@ MDX content for this template can be visually edited using [Dhub's WYSIWYG edito
 
 ## Tech stack
 
-[Next.js 15](https://nextjs.org)\
+[Next.js 16](https://nextjs.org)\
 The backbone of the site. Pre-renders pages at build time for fast production performance.
 
 [Prose UI](https://prose-ui.com)\

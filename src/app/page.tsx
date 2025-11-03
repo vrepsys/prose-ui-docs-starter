@@ -7,7 +7,7 @@ import { Footer } from '@/components/navigation/footer'
 export default () => {
   return (
     <div className="prose-ui">
-      <div className="mx-auto flex w-full items-center max-w-[var(--site-width)] px-[var(--site-padding-x)] flex-col pt-16 mb-32">
+      <div className="mx-auto flex w-full items-center max-w-(--site-width) px-(--site-padding-x) flex-col pt-16 mb-32">
         <div className="text-center max-w-2xl">
           <h1>
             Documentation starter template <br />
@@ -33,14 +33,14 @@ export default () => {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-32 h-px w-full bg-gradient-to-r from-transparent via-[hsl(var(--p-color-border))] to-transparent"></div>
+        <div className="mt-16 md:mt-32 h-px w-full bg-linear-to-r from-transparent via-[hsl(var(--p-color-border))] to-transparent"></div>
 
         {/* //[&>*:nth-child(even)]:border-l-2 [&>*]:border-color-base [&>*]:border-t-2 */}
         <div className="md:px-12 md:mt-12 grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-24">
           <Feature
             icon={<SiNextdotjs size={20} />}
-            title="Next.js 15 with app router"
-            description="Leverage the latest Next.js 15 features, including the app router, server actions, and more."
+            title="Next.js 16 with app router"
+            description="Leverage the latest Next.js 16 features, including the app router, server actions, and more."
           />
           <Feature
             icon={<SiTailwindcss size={20} />}
